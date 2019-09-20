@@ -102,6 +102,11 @@ problem2_df = tibble(
 ```{r}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_logical)) + geom_point()
 ```
+## Exporting first scatterplot to project directory:
+
+```{r}
+ggsave("problem2_df.pdf")
+```
 
 ## Making a scatterplot of y vs. x; color points using numeric variable
 
@@ -119,9 +124,4 @@ ggplot(problem2_df, aes(x = x, y = y, color = vec_factor)) + geom_point()
 
 *The second scatterplot has a color scale ranging from 0 to 1, since it color points using the numeric variable. However, we only see two colors, the dark and light blue representing 0 and 1. This is because 0 and 1 are the only two possible values for the numeric variable; they correspond to the TRUE and FALSE values of the logical variable that was coerced to create the numeric variable.*
 
-## Exporting first scatterplot to project directory:
-
-```{r}
-ggsave("problem2_df.pdf")
-```
 
