@@ -74,6 +74,7 @@ log_fac_num = as.numeric(as.factor(pull(problem1_df, norm_samp_pos)))
 log_fac_num * (pull(problem1_df, norm_samp))
 ```
 
+<<<<<<< HEAD
 # Problem 2
 
 ## Creating a data frame comprised of :
@@ -98,5 +99,7 @@ problem2_df = tibble(
 
 
 
+=======
+>>>>>>> 410089268064ba5d8ac30dd18984f61676d3e771
 
 
