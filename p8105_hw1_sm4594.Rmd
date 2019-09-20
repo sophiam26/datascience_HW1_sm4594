@@ -54,4 +54,25 @@ as.numeric(pull(problem1_df, vec_factor))
 
 *After applying the as.numeric function, the logical vector is assigned values of 1 and 0, which indicate whether or not an element of the sample is greater than 0. The factor vector is assigned values of 1, 2 and 3, indicating which of the three factor levels an element belongs to. Now that these variables are assigned numeric values, we are able to take the mean.*
 
+## The code chunk below does the following:
+
+* converts the logical vector to numeric, and multiplies the random sample by the result
+* converts the logical vector to a factor, and multiplies the random sample by the result
+* converts the logical vector to a factor and then converts the result to numeric, and multiplies the random sample by the result
+
+```{r}
+log_num = as.numeric(pull(problem1_df, norm_samp_pos))
+
+log_num * (pull(problem1_df, norm_samp))
+
+log_fac = as.factor(pull(problem1_df, norm_samp_pos))
+
+log_fac * (pull(problem1_df, norm_samp))
+
+log_fac_num = as.numeric(as.factor(pull(problem1_df, norm_samp_pos)))
+
+log_fac_num * (pull(problem1_df, norm_samp))
+```
+
+
 
