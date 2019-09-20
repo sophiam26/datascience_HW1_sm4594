@@ -44,5 +44,14 @@ mean(pull(problem1_df, vec_factor))
 
 ## Converting the logical, character, and factor variables to numeric:
 
+```{r}
+as.numeric(pull(problem1_df, norm_samp_pos))
+
+as.numeric(pull(problem1_df, vec_char))
+
+as.numeric(pull(problem1_df, vec_factor))
+```
+
+*After applying the as.numeric function, the logical vector is assigned values of 1 and 0, which indicate whether or not an element of the sample is greater than 0. The factor vector is assigned values of 1, 2 and 3, indicating which of the three factor levels an element belongs to. Now that these variables are assigned numeric values, we are able to take the mean.*
 
 
