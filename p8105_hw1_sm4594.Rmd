@@ -102,6 +102,7 @@ problem2_df = tibble(
 ```{r plot1}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_logical)) + geom_point()
 ```
+
 ## Exporting first scatterplot to project directory:
 
 ```{r plot_save}
