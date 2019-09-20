@@ -5,7 +5,7 @@ date: "9/19/2019"
 output: github_document
 ---
 
-# Loading tidyverse:
+# Loading tidyverse
 
 ```{r tidyverse}
 library(tidyverse)
@@ -28,7 +28,7 @@ problem1_df = tibble(
 )
 ```
 
-# Taking the mean of each variable in the above data frame
+## Taking the mean of each variable in the above data frame:
 
 ```{r means}
 mean(pull(problem1_df, norm_samp))
@@ -42,7 +42,7 @@ mean(pull(problem1_df, vec_factor))
 
 *We are able only able to take the mean of the numeric and logical variables. We are unable to take the mean of the character and factor variables.*
 
-## Converting the logical, character, and factor variables to numeric:
+## Converting the logical, character and factor variables to numeric:
 
 ```{r}
 as.numeric(pull(problem1_df, norm_samp_pos))
@@ -52,9 +52,10 @@ as.numeric(pull(problem1_df, vec_char))
 as.numeric(pull(problem1_df, vec_factor))
 ```
 
-*After applying the as.numeric function, the logical vector is assigned values of 1 and 0, which indicate whether or not an element of the sample is greater than 0. The factor vector is assigned values of 1, 2 and 3, indicating which of the three factor levels an element belongs to. Now that these variables are assigned numeric values, we are able to take the mean.*
+*After applying the "as.numeric" function, the logical vector is assigned values of 1 and 0, which indicate whether or not an element of the sample is greater than 0. The factor vector is assigned values of 1, 2 and 3, indicating which of the three factor levels an element belongs to. Now that these variables are assigned numeric values, we are able to take the mean.*
 
-## The code chunk below does the following:
+## Converting vector types and multiplying results by random sample:
+##### Specifically, the code chunk below does the following:
 
 * converts the logical vector to numeric, and multiplies the random sample by the result
 * converts the logical vector to a factor, and multiplies the random sample by the result
@@ -74,7 +75,6 @@ log_fac_num = as.numeric(as.factor(pull(problem1_df, norm_samp_pos)))
 log_fac_num * (pull(problem1_df, norm_samp))
 ```
 
-<<<<<<< HEAD
 # Problem 2
 
 ## Creating a data frame comprised of :
@@ -108,16 +108,18 @@ ggplot(problem2_df, aes(x = x, y = y, color = vec_logical)) + geom_point()
 ```{r}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_numeric)) + geom_point()
 ```
+
 ## Making a scatterplot of y vs. x; color points using factor variable
 
 ```{r}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_factor)) + geom_point()
 ```
+
 *The logical and factor variables have a value of either TRUE or FALSE. Therefore, in the first and third scatterplots, the blue dots represent the cases for which  the statment x + y > 1 is true, and the red dots represent the cases for which the statment x + y > 1 is false.* 
 
 *The second scatterplot has a color scale ranging from 0 to 1, since it color points using the numeric variable. However, we only see two colors, the dark and light blue representing 0 and 1. This is because 0 and 1 are the only two possible values for the numeric variable; they correspond to the TRUE and FALSE values of the logical variable that was coerced to create the numeric variable.*
 
-## Exporting first scatterplot to project directory
+## Exporting first scatterplot to project directory:
 
 ```{r}
 ggsave("problem2_df.pdf")
