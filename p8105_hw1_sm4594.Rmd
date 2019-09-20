@@ -74,3 +74,24 @@ log_fac_num = as.numeric(as.factor(pull(problem1_df, norm_samp_pos)))
 log_fac_num * (pull(problem1_df, norm_samp))
 ```
 
+# Problem 2
+
+## Creating a data frame comprised of :
+
+* x: a random sample of size 500 from a standard normal distribution
+* y: a random sample of size 500 from a standard normal distribution
+* a logical vector indicating whether x + y >1 
+* a numeric vector created by coercing the above logical vector
+* a factor vector created by coercing the above logical vector
+
+```{r problem2_df}
+problem2_df = tibble(
+  x = rnorm(500),
+  y = rnorm(500),
+  vec_logical = x + y > 1,
+  vec_numeric = as.numeric(vec_logical),
+  vec_factor = as.factor(vec_logical),
+)
+```
+
+
