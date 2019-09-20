@@ -41,7 +41,8 @@ mean(pull(problem1_df, vec_char))
 mean(pull(problem1_df, vec_factor))
 ```
 
-We are able only able to take the mean of the numeric and logical variables. We are unable to take the mean of the character and factor variables. 
+*We are able only able to take the mean of the numeric and logical variables. We are unable to take the mean of the character and factor variables.*
 
+## Converting the logical, character, and factor variables to numeric:
 
 
