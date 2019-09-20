@@ -95,11 +95,9 @@ problem2_df = tibble(
 )
 ```
 
+## Making a scatterplot of y vs. x; color points using logical variable
 
-
-
-
-=======
->>>>>>> 410089268064ba5d8ac30dd18984f61676d3e771
-
+```{r}
+ggplot(problem2_df, aes(x = x, y = y, color = vec_logical)) + geom_point()
+```
 
