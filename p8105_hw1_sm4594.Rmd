@@ -95,7 +95,7 @@ problem2_df = tibble(
 )
 ```
 
-There are `r nrow(problem2_df)` rows and `r ncol(problem2_df)` columns in the dataset. The mean, median, and standard deviation of x are `r mean(pull(problem2_df, x))`, `r median(pull(problem2_df, x))` and `r sd(pull(problem2_df, x))`, respectively.
+*There are `r nrow(problem2_df)` rows and `r ncol(problem2_df)` columns in the dataset. The mean, median, and standard deviation of x are `r mean(pull(problem2_df, x))`, `r median(pull(problem2_df, x))` and `r sd(pull(problem2_df, x))`, respectively.*
 
 ## Making a scatterplot of y vs. x; color points using logical variable
 
