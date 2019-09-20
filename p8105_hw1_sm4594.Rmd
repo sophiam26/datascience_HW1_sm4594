@@ -99,24 +99,24 @@ problem2_df = tibble(
 
 ## Making a scatterplot of y vs. x; color points using logical variable
 
-```{r}
+```{r plot1}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_logical)) + geom_point()
 ```
 ## Exporting first scatterplot to project directory:
 
-```{r}
+```{r plot_save}
 ggsave("problem2_df.pdf")
 ```
 
 ## Making a scatterplot of y vs. x; color points using numeric variable
 
-```{r}
+```{r plot_2}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_numeric)) + geom_point()
 ```
 
 ## Making a scatterplot of y vs. x; color points using factor variable
 
-```{r}
+```{r plot_3}
 ggplot(problem2_df, aes(x = x, y = y, color = vec_factor)) + geom_point()
 ```
 
